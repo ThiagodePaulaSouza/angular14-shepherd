@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ShepherdService } from 'angular-shepherd';
-import { steps as defaultSteps, defaultStepOptions} from './data';
+import { steps, defaultStepOptions } from '../data';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  selector: 'shepherd',
+  templateUrl: './shepherd.component.html',
+  styleUrls: ['./shepherd.component.css'],
 })
-export class AppComponent {
-  title = 'romario';
+export class ShepherdComponent implements AfterViewInit {
   constructor(private shepherdService: ShepherdService) {}
+
   ngAfterViewInit() {
     this.shepherdService.defaultStepOptions = defaultStepOptions;
     this.shepherdService.modal = true;
     this.shepherdService.confirmCancel = false;
-    this.shepherdService.addSteps(defaultSteps)
+    // this.shepherdService.addSteps(steps);
     this.shepherdService.start();
   }
 }
