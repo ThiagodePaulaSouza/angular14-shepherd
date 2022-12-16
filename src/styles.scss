@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+.shepherd-button {
+    background: #3288e6 !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    color: hsla(0, 0%, 100%, .75) !important;
+    cursor: pointer !important;
+    margin-right: .5rem !important;
+    padding: .5rem 1.5rem !important;
+    transition: all .5s ease !important;
+}
+
+.shepherd-button:not(:disabled):hover {
+    background: #196fcc !important;
+    color: hsla(0, 0%, 100%, .75) !important;
+}
+
+.shepherd-button.shepherd-button-secondary {
+    background: #f1f2f3 !important;
+    color: rgba(0, 0, 0, .75) !important;
+}
+
+.shepherd-button.shepherd-button-secondary:not(:disabled):hover {
+    background: #d6d9db !important;
+    color: rgba(0, 0, 0, .75) !important;
+}
+
+.shepherd-button:disabled {
+    cursor: not-allowed !important;
+}
+
+.shepherd-footer {
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 0 .75rem .75rem !important;
+}
+
+.shepherd-footer .shepherd-button:last-child {
+    margin-right: 0 !important;
+}
+
+.shepherd-cancel-icon {
+    background: transparent !important;
+    border: none !important;
+    color: hsla(0, 0%, 50%, .75) !important;
+    cursor: pointer !important;
+    font-size: 2em !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: color .5s ease !important;
+}
+
+.shepherd-cancel-icon:hover {
+    color: rgba(0, 0, 0, .75) !important;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
+    color: hsla(0, 0%, 50%, .75) !important;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon:hover {
+    color: rgba(0, 0, 0, .75) !important;
+}
+
+.shepherd-title {
+    color: rgba(0, 0, 0, .75) !important;
+    display: flex !important;
+    flex: 1 0 auto !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.shepherd-header {
+    align-items: center !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    line-height: 2em !important;
+    padding: .75rem .75rem 0 !important;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header {
+    background: #e6e6e6 !important;
+    padding: 1em !important;
+}
+
+.shepherd-text {
+    color: rgba(0, 0, 0, .75) !important;
+    font-size: 1rem !important;
+    line-height: 1.3em !important;
+    padding: .75em !important;
+}
+
+.shepherd-text p {
+    margin-top: 0 !important;
+}
+
+.shepherd-text p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.shepherd-content {
+    border-radius: 5px !important;
+    outline: none !important;
+    padding: 0 !important;
+}
+
+.shepherd-element {
+    background: #fff !important;
+    border-radius: 5px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2) !important;
+    max-width: 400px !important;
+    opacity: 0 !important;
+    outline: none !important;
+    transition: opacity .3s, visibility .3s !important;
+    visibility: hidden !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+}
+
+.shepherd-enabled.shepherd-element {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.shepherd-element[data-popper-reference-hidden]:not(.shepherd-centered) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+.shepherd-element,
+.shepherd-element *,
+.shepherd-element :after,
+.shepherd-element :before {
+    box-sizing: border-box !important;
+}
+
+.shepherd-arrow,
+.shepherd-arrow:before {
+    height: 16px !important;
+    position: absolute !important;
+    width: 16px !important;
+    z-index: -1 !important;
+}
+
+.shepherd-arrow:before {
+    background: #fff !important;
+    content: "" !important;
+    transform: rotate(45deg) !important;
+}
+
+.shepherd-element[data-popper-placement^=top]>.shepherd-arrow {
+    bottom: -8px !important;
+}
+
+.shepherd-element[data-popper-placement^=bottom]>.shepherd-arrow {
+    top: -8px !important;
+}
+
+.shepherd-element[data-popper-placement^=left]>.shepherd-arrow {
+    right: -8px !important;
+}
+
+.shepherd-element[data-popper-placement^=right]>.shepherd-arrow {
+    left: -8px !important;
+}
+
+.shepherd-element.shepherd-centered>.shepherd-arrow {
+    opacity: 0 !important;
+}
+
+.shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
+    background-color: #e6e6e6
+}
+
+.shepherd-target-click-disabled.shepherd-enabled.shepherd-target,
+.shepherd-target-click-disabled.shepherd-enabled.shepherd-target * {
+    pointer-events: none !important;
+}
+
+.shepherd-modal-overlay-container {
+    height: 0 !important;
+    left: 0 !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    transition: all .3s ease-out, height 0ms .3s, opacity .3s 0ms !important;
+    width: 100vw !important;
+    z-index: 9997 !important;
+}
+
+.shepherd-modal-overlay-container.shepherd-modal-is-visible {
+    height: 100vh !important;
+    opacity: .5 !important;
+    transform: translateZ(0) !important;
+    transition: all .3s ease-out, height 0s 0s, opacity .3s 0s !important;
+}
+
+.shepherd-modal-overlay-container.shepherd-modal-is-visible path {
+    pointer-events: all !important;
+}
